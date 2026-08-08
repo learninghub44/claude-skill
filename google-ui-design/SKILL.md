@@ -48,13 +48,27 @@ Use color mainly for actions, links, status, and navigation state — not decora
 
 **Header** — logo, nav, help/sign-in; light background, minimal border, clear active state, simple icons. Avoid mega menus and heavy shadows. Mobile: logo + menu drawer.
 
-**Search** (prominent for docs/products/records apps) — generous padding, rounded corners, search icon, clear placeholder, strong focus state, keyboard accessible.
+**Search** (prominent for docs/products/records apps) — generous padding, rounded corners, search icon, clear placeholder, strong focus state, keyboard accessible. Subtle border, not a heavy shadow.
+
+```
+┌─────────────────────────────────────────────┐
+│  [search icon]  Search for help or type a…  │
+└─────────────────────────────────────────────┘
+```
 
 **Cards** — white surface, thin border, moderate radius, minimal/no shadow, comfortable padding, clear title + description, optional icon/link. Use borders and whitespace for hierarchy, not heavy elevation.
 
 **Buttons** — primary (brand bg, white text), secondary (light bg, border, dark text), text button (no container, brand-colored text). Always implement hover, focus, disabled, and loading states. Don't oversize.
 
 **Forms** — explicit label + input + helper text + inline error for every field. Never rely on placeholder-as-label. Visible focus states, helpful validation, loading/success states, full keyboard nav.
+
+```
+Email address
+┌──────────────────────────────┐
+│ name@example.com             │
+└──────────────────────────────┘
+We'll use this email to contact you.
+```
 
 **Icons** — one consistent library (Lucide or Material Symbols), simple/outlined, sized and used semantically — not decoratively on every line.
 
@@ -68,9 +82,21 @@ Use color mainly for actions, links, status, and navigation state — not decora
 
 **Loading states** — never leave the user guessing. Prefer skeleton loaders for content-heavy pages; spinners/disabled-button/progress indicators elsewhere.
 
-**Empty states** — always explain what's missing and offer the next action (e.g. "No projects yet — Create your first project to get started" + button). Never just "No data".
+**Empty states** — always explain what's missing and offer the next action. Never just "No data".
+
+```
+No projects yet
+Create your first project to get started.
+[Create project]
+```
 
 **Error states** — always cover: what happened, why it might have happened, what to do next (e.g. a retry action). Avoid raw technical errors unless the audience is technical.
+
+```
+We couldn't load your projects.
+Check your internet connection and try again.
+[Try again]
+```
 
 ## Animation
 
